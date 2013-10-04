@@ -1,0 +1,6 @@
+name: toctan.com
+permalink: /articles/:title
+pygments: true
+markdown: redcarpet
+redcarpet:
+  extensions: [autolink, superscript, no_intra_emphasis, tables, strikethrough]

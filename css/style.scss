@@ -1,0 +1,227 @@
+@import 'reset';
+@import 'fonts';
+@import 'syntax';
+
+$color: #444;
+$link-color: #ad141e;
+$border-color: #CCC;
+$code-bgcolor: #FFFFFF;
+$line-height: 1.7rem;
+
+body {
+  font-family: "Chronicle SSm A", "Chronicle SSm B", serif;
+  font-size: 1rem;
+  line-height: $line-height;
+  color: $color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code {
+  background: $code-bgcolor;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: .9rem;
+  outline: 1px solid $border-color;
+  white-space: nowrap;
+  margin: 0 .3rem;
+  padding: 0 3px;
+}
+
+pre {
+  background: $code-bgcolor;
+  border: 1px solid lighten($border-color,5%);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  line-height: 1.5;
+  margin: $line-height 0;
+  overflow-x: auto;
+  padding: .5rem 1rem;
+  white-space: pre;
+  word-wrap: normal;
+
+  code {
+    background: none;
+    display:block;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    white-space: inherit;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid $border-color;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+        color: $link-color;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1em 5em 1em;
+
+
+  h1.title {
+    font:700 2rem/1.2em proxima-nova-1,"Helvetica Neue",Helvetica,sans-serif;
+    text-align: center;
+    margin: 4rem 0;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $link-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+article.post {
+
+  .gist {
+    color: inherit;
+    font-size: .9rem;
+    line-height: 1.5;
+
+    table {
+      margin: 0;
+      td.line-data {
+        vertical-align: bottom;
+        background: $code-bgcolor;
+      }
+    }
+  }
+
+  h2, h3, h4 {
+    color: darken($color, 20%);
+    font-family: "Sentinel SSm A", "Sentinel SSm B";
+    font-size: 1rem;
+    font-weight: 800;
+    margin: $line-height 0px $line-height / 2;
+  }
+
+  p {
+    font-style: 1rem;
+    margin: 0px 0px $line-height / 2;
+  }
+
+  blockquote {
+    color: lighten($color, 20%);
+    font-style: italic;
+    margin: $line-height 0;
+    padding: 0 1rem;
+    quotes: inherit;
+
+    &:before {
+      color: $border-color;
+      content: open-quote;
+      font-size: 3em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+
+    p {
+      display: inline;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul, ol {
+    margin: 0 0 1rem 1.1rem;
+  }
+
+  ol li {
+    list-style-type: decimal;
+    position: relative;
+    margin: 0;
+
+    ol {
+      margin-left: 1.4rem;
+    }
+  }
+
+  dl {
+    margin: $line-height 0;
+
+    dd {
+      margin-left: 1rem;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: $line-height / 2 auto;
+  }
+
+  table {
+    width: 100%;
+    margin: $line-height 0;
+
+    tr {
+      border-bottom: 1px solid lighten($border-color, 10%);
+    }
+
+    td, th {
+      padding: .25rem;
+    }
+
+    th {
+      font-family: "Sentinel SSm A", "Sentinel SSm B";
+      font-weight: 800;
+      text-align: left;
+    }
+  }
+}
+
+ul.posts {
+  margin-left: 25%;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    padding: 1rem;
+    overflow: hidden;
+
+    h1.title {
+      float: left;
+      font-size: 1rem;
+    }
+  }
+
+  ul.posts {
+    margin-left: inherit;
+  }
+}
