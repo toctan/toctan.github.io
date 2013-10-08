@@ -26,6 +26,7 @@ a {
 
 code {
   background: $code-bgcolor;
+  color: #d01040;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: .9rem;
   outline: 1px solid $border-color;
@@ -49,6 +50,7 @@ pre {
 
   code {
     background: none;
+    color: inherit;
     display:block;
     margin: 0;
     outline: none;
