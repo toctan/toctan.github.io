@@ -1,0 +1,21 @@
+{% if page.description %}
+  <meta name="description" content="{{  }}page.description | truncatewords: 100 | strip_newlines | escape_once }}" />
+{% else %}
+  <meta name="description" content="{{ content | strip_html | truncatewords: 100 | strip_newlines | escape_once }}" />
+{% endif %}
+
+{% if page.tags %}
+  <meta name="keywords" content="{{ page.tags | join: ','}}" />
+{% else %}
+  <meta name="keywords" content="{{ site.keywords | join: ',' }}" />
+{% endif %}
+
+{% if page.date %}
+  <meta http-equiv="date" content="{{ page.date | date_to_xmlschema }}" />
+{% endif %}
+
+<meta name="robots" content="{{page.index}}INDEX,{{page.follow}}FOLLOW" />
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, hrome=1">
+<meta name="viewport" content="width=device-width, inimum-scale=1, aximum-scale=1">

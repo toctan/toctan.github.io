@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Be careful with before(:all) in RSpec
+tags: rspec database_cleaner capybara transaction truncation rails
 ---
 
 After adding more feature specs about a model, I noticed the test
@@ -21,7 +22,7 @@ I did not know why I have to use it, but almost every tutorial about
 RSpec use it. So I started to investigate, but, the README of
 database_cleaner is not really very _friendly_.
 
-## So what the hell is transaction, trunction and deletion?
+## So what the hell is transaction, truncation and deletion?
 
 * [Transaction][]: A work-unit performed within a database in a coherent,
   reliable way and independent of other transactions. Transactions act

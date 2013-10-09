@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How Lisp Get Evaluated
+tags: programming lisp emacs macro special form
 ---
 
 > To the untutored eye, Lisp is a strange programming language.  

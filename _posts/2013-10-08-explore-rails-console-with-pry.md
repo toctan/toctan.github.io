@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Explore rails console with pry
+tags: pry rails console routes helper ruby
 ---
 
 Before we get started, let's integrate pry with our rails

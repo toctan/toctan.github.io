@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git is just a graph
+tags: git graph
 ---
 
 Get started with git is quite easy, but after several months with git,
