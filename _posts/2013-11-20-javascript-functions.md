@@ -41,6 +41,7 @@ which makes it a [first class citizen][], it may be
 
 
 ## var & return
+
 `var` statement is used to declare and initialize variables within a
 function. It will get split into two parts, the declaration part will
 get hoisted to the top of the function, initialized with `undefined`,
@@ -56,23 +57,38 @@ var a = undefined,
 a = 0;
 ```
 
-Actually, the function statement is just a short-hand for a `var`
-statement with a function expression.
-
-```js
-function foo() {}
-// expands to =>
-
-var foo = function foo() {};
-// expands to =>
-
-var foo = undefined;
-foo = function foo() {};
-```
-
 Every function in JavaScript returns something, if you do not implicitly
 return a value, the return value is `undefined`. There is a special case
 with constructors, which will return `this`.
+
+
+## function statement vs function expression
+
+The function produced by function statement also gets hoisted, which makes
+it available everywhere in the scope. So it can be called before the actual
+definition in the source.
+
+```js
+foo(); // => hello world
+
+function foo() {
+    console.log('hello world');
+}
+```
+
+Due to the hoisting caused by the `var` statement, if you try to call a
+function produced by the expression form before where it's defined, you
+will get an type error.
+
+```js
+foo;   // =>undefined
+foo(); // => TypeError: undefined is not a function
+
+var foo = function() {};
+```
+
+For more information on this, go read
+[Named function expression demystified][] by _Juriy Zaytsev_.
 
 
 ## Invocation
@@ -110,8 +126,24 @@ baz('hello', 'world')
 => ["hello", "world"]
 ```
 
-`this` contains a reference to the object of invocation. It's very
-similar to `self` in other object oriented programming languages.
+Similar to `self` in many other object oriented programming languages,
+`this` contains a reference to the object of invocation. `this` allows
+a single function object to service many functions, it's key to prototypal
+inheritance.
+
+```js
+function Foo() {}
+Foo.prototype.method = function() {
+    console.log(this);
+};
+
+function Bar() {}
+Bar.prototype = Foo.prototype;
+
+new Bar().method();
+// => Bar {method: function}
+```
+
 
 JavaScript functions can be invoked in four ways, which differ in how
 `this` is initialized.
@@ -141,10 +173,13 @@ obj.call(thisObj, 1, 2, 3)
 
 ## Resources
 
-[Function the Ultimate][]<br> A great talk on JavaScript functions by
-Douglas Crockford, highly recommended!!!
+- [Function the Ultimate][] <br> A great talk on JavaScript functions by
+  _Douglas Crockford_, highly recommended!!!
+- [JavaScript Garden][] <br> All about the quirky parts of JavaScript.
 
 
 [Douglas Crockford]: http://www.crockford.com/
 [first class citizen]: http://en.wikipedia.org/wiki/First-class_citizen
+[Named function expression demystified]: http://kangax.github.io/nfe/
 [Function the Ultimate]: http://www.youtube.com/watch?v=ya4UHuXNygM
+[JavaScript Garden]: http://bonsaiden.github.io/JavaScript-Garden/
