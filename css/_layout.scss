@@ -1,0 +1,28 @@
+/*------------------------------------*\
+  $LAYOUT
+\*------------------------------------*/
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 $half-spacing-unit;
+  }
+}
+
+.site-header {
+  padding: $half-spacing-unit;
+  margin-bottom: $base-spacing-unit;
+  font-style: italic;
+  text-align: right;
+}
+
+.site-footer {
+  text-align: center;
+  margin-bottom: 2 * $base-spacing-unit;
+}
+

@@ -1,0 +1,39 @@
+/*------------------------------------*\
+  $CODE
+\*------------------------------------*/
+
+
+code {
+  margin: 0 .3rem;
+  padding: 0 3px;
+  outline: 1px solid $base-ui-color;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: .8rem;
+  white-space: nowrap;
+  color: #d01040;
+}
+
+
+/**
+ * $PRE
+ */
+pre {
+  padding: $half-spacing-unit;
+  border: 1px solid lighten($base-ui-color, 5%);
+  border-bottom-width: 2px;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+  border-radius: $brand-round;
+
+  code {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+    outline: none;
+    white-space: inherit;
+  }
+}
+

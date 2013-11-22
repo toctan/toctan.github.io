@@ -1,0 +1,55 @@
+/*------------------------------------*\
+  $POST
+\*------------------------------------*/
+
+.post {
+  margin-bottom: 2 * $base-spacing-unit;
+}
+
+.post__title {
+  margin-bottom: 0;
+  font-family: Intro, "Helvetica Neue", Helvetica, sans-serif;
+  @include font-size(30px);
+  text-align: center;
+  color: darken($base-color, 20%);
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-color;
+    }
+  }
+}
+
+.post__meta {
+  font-style: italic;
+  @include font-size(16px);
+  text-align: center;
+}
+
+.post__body {
+  @include headings(1, 6) {
+    margin-bottom: $half-spacing-unit;
+    @include font-size($base-font-size);
+    color: darken($base-color, 20%);
+  }
+}
+
+.posts__title {
+  @extend .post__title;
+  margin-bottom: $base-spacing-unit;
+}
+
+.posts {
+  margin-left: 25%;
+  margin-bottom: 2 * $base-spacing-unit;
+  list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+  .posts {
+    margin-left: inherit;
+  }
+}

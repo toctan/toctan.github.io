@@ -1,0 +1,38 @@
+/*------------------------------------*\
+  $VARS
+\*------------------------------------*/
+
+/**
+ * Base stuff
+ */
+$base-font-size:    18px;
+$base-line-height:  27px;
+
+$base-font-family:  Georgia, serif;
+
+$base-color:        #4c4c4c;
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:     #ccc!default;
+
+
+/**
+ * Brand stuff
+ */
+$brand-color:       #ad141e;
+
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:        4px!default;
+
+
+/**
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+$base-spacing-unit: $base-line-height;
+$half-spacing-unit: $base-spacing-unit / 2;
+$line-height-ratio: $base-line-height / $base-font-size;

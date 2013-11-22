@@ -4,8 +4,8 @@ title: How Lisp Get Evaluated
 tags: programming lisp emacs macro special form
 ---
 
-> To the untutored eye, Lisp is a strange programming language.  
-> <cite>— [Robert J. Chassell](http://bit.ly/1bIly9E)</cite>
+> To the untutored eye, Lisp is a strange programming language.
+> <cite>[Robert J. Chassell](http://bit.ly/1bIly9E)</cite>
 
 In Lisp, both data and programs are lists of words, numbers, or other
 lists, separeted by whitespace and surrounded by parenthese.
@@ -80,4 +80,3 @@ x ; => Symbol's value as variable is void: x
 
 Note: A symbol can have both a function definition and a value attached to
 it at the same time.
-

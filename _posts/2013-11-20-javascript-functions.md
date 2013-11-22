@@ -6,8 +6,8 @@ tags: JavaScript js function
 
 
 > Functions are the very best part of JavaScript, it's where the most
-> power is, it's where the most beauty is.<br>
-> <cite>— [Douglas Crockford][]</cite>
+> power is, it's where the most beauty is.
+> <cite>[Douglas Crockford][]</cite>
 
 
 ## Function Objects
