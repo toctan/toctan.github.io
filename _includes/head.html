@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ page.title }} - {{ site.name }}</title>
+
+{% if page.description %}
+  <meta name="description" content="{{ page.description }} | truncatewords: 100 | strip_newlines | escape_once }}">
+{% else %}
+  <meta name="description" content="{{ content | strip_html | truncatewords: 100 | strip_newlines | escape_once }}">
+{% endif %}
+
+{% if page.tags %}
+  <meta name="keywords" content="{{ page.tags | join: ', '}}">
+{% else %}
+  <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
+{% endif %}
+
+{% if page.date %}
+  <meta http-equiv="date" content="{{ page.date | date_to_xmlschema }}">
+{% endif %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/css/style.min.css">

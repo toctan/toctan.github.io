@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .post {
-  margin-bottom: 2 * $base-spacing-unit;
+  @extend .landmark;
 }
 
 .post__title {
@@ -43,8 +43,8 @@
 }
 
 .posts {
+  @extend .landmark;
   margin-left: 25%;
-  margin-bottom: 2 * $base-spacing-unit;
   list-style: none;
 }
 

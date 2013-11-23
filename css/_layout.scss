@@ -15,14 +15,15 @@
 }
 
 .site-header {
-  padding: $half-spacing-unit;
-  margin-bottom: $base-spacing-unit;
+  @extend %sass-margin-bottom;
+  padding: $base-spacing-unit;
   font-style: italic;
   text-align: right;
 }
 
 .site-footer {
+  @extend .landmark;
+  font-style: italic;
   text-align: center;
-  margin-bottom: 2 * $base-spacing-unit;
 }
 
