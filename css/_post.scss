@@ -2,6 +2,7 @@
   $POST
 \*------------------------------------*/
 
+
 .post {
   @extend .landmark;
 }
@@ -34,6 +35,11 @@
     margin-bottom: $half-spacing-unit;
     @include font-size($base-font-size);
     color: darken($base-color, 20%);
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
