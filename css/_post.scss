@@ -9,10 +9,8 @@
 
 .post__title {
   margin-bottom: 0;
-  font-family: Intro, "Helvetica Neue", Helvetica, sans-serif;
-  @include font-size(30px);
   text-align: center;
-  color: darken($base-color, 20%);
+  @include font-size(30px);
 
   a {
     color: inherit;
@@ -33,13 +31,12 @@
 .post__body {
   @include headings(1, 6) {
     margin-bottom: $half-spacing-unit;
-    @include font-size($base-font-size);
-    color: darken($base-color, 20%);
+    @include font-size(20px);
   }
 
   img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
   }
 }
 
