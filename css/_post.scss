@@ -56,3 +56,16 @@
     margin-left: inherit;
   }
 }
+
+
+/*------------------------------------*\
+  $GIST
+\*------------------------------------*/
+.gist {
+  @extend %sass-margin-bottom;
+  font-size: .9rem;
+
+  table {
+    margin: 0;
+  }
+}
