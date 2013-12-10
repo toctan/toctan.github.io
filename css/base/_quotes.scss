@@ -9,7 +9,7 @@ blockquote {
 
   p:before {
     color: $base-ui-color;
-    content: "\275d" "\00A0";
+    content: open-quote "\00A0";
     font-size: 3em;
     line-height: 0;
     vertical-align: -0.4em;
