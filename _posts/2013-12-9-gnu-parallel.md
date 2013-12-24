@@ -67,7 +67,7 @@ locally or remotely. With parallel, the previous youtube script can
 rewritten into a one-liner:
 
 ```bash
-$ cat videos.txt | parallel -j3 youtube-Del -o "%(title)s.%(ext)s"
+$ cat videos.txt | parallel -j3 youtube-dl -o "%(title)s.%(ext)s"
 ```
 
 The amazing thing about parallel is that __it does not only run the
